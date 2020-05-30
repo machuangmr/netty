@@ -60,6 +60,9 @@ public final class DiscardServer {
                      ChannelPipeline p = ch.pipeline();
                      if (sslCtx != null) {
                          p.addLast(sslCtx.newHandler(ch.alloc()));
+
+
+
                      }
                      p.addLast(new DiscardServerHandler());
                  }
